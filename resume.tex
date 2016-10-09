@@ -1,0 +1,214 @@
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tabu}
+\usepackage{tocloft}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Ujjwal Kumar Singh} & \textbf{Ph: +91 8826235246} \\
+Indirapuram, NCR & ujjwalks01@gmail.com\\
+& uweblog.herokuapp.com \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Educational Qualifications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\begin{tabu} to 1\textwidth {  X[1,c] | X[2,c] | X[2.5,c] | X[1,c]  } \textbf{Year} & \textbf{Degree/Certificate} & \textbf{Institute/School} & \textbf{CGPA/\%age} \\
+ \hline
+ 2014 & B. Tech(Computer Science) & IIT Kanpur  & 8.2/10.0  \\
+ \hline
+ 2010 & AISSCE(CBSE Board) & Milton Public School, Agra  & 86\%  \\
+ \hline
+ 2008 & AISSE(ICSE Board) & Rani Laxmibai Public School, Jhansi  & 93\%  \\
+\end{tabu}
+\end{center}
+
+\begin{itemize}
+
+\item \textbf{ACM ICPC International} Collegiate Programming Contest 2012, Kanpur site regional finalist
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item \ressubheading{K-Dominance in skyline join queries(KSJQ)}{IIT Kanpur}{B.Tech Project under the guidance of Dr. Arnab Bhattacharya}{Aug'13 - June 13}
+
+\begin{itemize}
+	\resitem{\textbf{Initiated research} on finding Skyline data points according to k-Dominance in relational database Join Queries}
+	\resitem{\textbf{Designed efficient algorithms} for computing K-Dominant skyline sets in joined relations}
+	\resitem{\textbf{Verified the efficiency} of the designed algorithms on carefully designed synthetic data}
+\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item \ressubheading{ARTIFICIAL GAMING AGENT}{Feb'13 - Apr'13}{Artificial Intelligence Course Project under the guidance of Dr. Amitabha Mukherjee}{}
+
+\begin{itemize}
+	\resitem{\textbf{Developed artificial Gaming agent}, capable of intelligently playing any GDL describable game without having any prior knowledge of it and without any human intervention.}
+	\resitem{\textbf{Explored Bandit and Monte Carlo Tree Search} (MCTS) methods.}
+	\resitem{\textbf{Implemented} recent work published by \textbf{CadiaPlayer} (3 times winner in General Game Playing competition in \textbf{AAAI conference}) which involves putting Upper Confidence Bound (UCB) in MCTS approach.}
+	\resitem{Selected in the \textbf{top 5 among 40 projects} in the course : Artificial Intelligence.}
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize}
+
+\item \ressubheading{MOVIE RATING PREDICTION SYSTEM}{Aug'13 - Dec'13}{Machine Learning Course Project under the guidance of Dr. Harish Karnick}{}
+
+\begin{itemize}
+	\resitem{\textbf{Collaborative filtering} setting where one user’s preferences are used to find users with similar preferences.}
+	\resitem{Similarity between the users or movies can be calculated by using the \textbf{Jaccard Distance* and Cosine Distance}}
+	\resitem{Improved the accuracy by using different methods like \textbf{k-nearest neighbor approach and SVM classifier}}
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize}
+
+
+\item \ressubheading{PINTOS : OPERATING SYSTEM}{Aug'12 - Nov'12}{Operating Systems Course Project under the guidance of Dr. Subhajit Roy}{}
+
+\begin{itemize}
+	\resitem{ \textbf{Implemented a subset of Posix interface} of message queues and Pthreads to  \textbf{solve the Producer-Consumer problem}}
+	\resitem{ \textbf{Implemented the First Come First Serve (FCFS), Round Robin (RR) and Priority Scheduling} scheduling policies}
+	\resitem{ \textbf{Implemented virtual memory management} via pure demand paging with backing store using big blocks of memory}
+	\resitem{ \textbf{Implemented fork(), exec(), mkdir(), chdir(), readdir()} system calls}
+	
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize}
+
+\item {OTHER PROJECTS}
+
+\begin{itemize}
+	\resitem{\textbf{Hall and Library Management System} using Django Framework.}
+	\resitem{\textbf{Compiler for C++} language}
+	\resitem{\textbf{Implementation of 32-bit processor} on FPGA}
+\end{itemize}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Java Community Contribution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item \ressubheading{Addressing issues in Garbage Collector in Java}{Jan'14-Apr'14}{Objected Oriented Programming Course Project}{}
+
+\begin{itemize}
+	\resitem{Carried out exhaustive experiments to see the performance of G1 garbage collector for a given scenario.}
+	\resitem{\textbf{Configured G1 to achieve high responsiveness and skip STOP THE WORLD event}}
+\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Relevant Courses}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{tabu} to 1\textwidth {  X[1.5,c]  X[1,c]  X[1,c]  X[1.2,c]  }
+ Data Structures and Algorithms & Operating Systems & Database Systems  & Computer Networks  \\
+ Probability and Statistics & Algorithms-II & Compiler Design & Computer Organization  \\
+ Advanced Network Security & Game Theory & Discrete Mathematics  & OOPs  \\
+ Randomized Algorithms  & Machine Learning & Artificial Intelligence  &   \\
+\end{tabu}
+\end{center}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+ \item First item
+ \item Second item
+\end{enumerate}
+
+\begin{itemize}
+ \item First item
+ \item Second item
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{Nobel Prize \cftdotfill{\cftdotsep} 2013}\\
+        \multicolumn{2}{c}{Big grant \cftdotfill{\cftdotsep} 2010-2013}\\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+
+\end{document}
